@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sivi 👑</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #190911;
+    color: #f8e8c5;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background: #210c17;
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #c9a45c;
+    z-index: 10;
+}
+
+nav a {
+    color: #dfbd78;
+    text-decoration: none;
+    margin: 0 12px;
+    font-size: 13px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background:
+    radial-gradient(circle, #512036, #190911 75%);
+    position: relative;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 12vw, 110px);
+    color: #e3bd75;
+    margin: 25px 0;
+    text-shadow: 0 0 25px #a8793d;
+}
+
+.hero p {
+    max-width: 600px;
+    line-height: 1.8;
+    color: #e8d6b7;
+}
+
+.subtitle {
+    letter-spacing: 7px;
+    color: #c9a45c;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    margin-top: 30px;
+    border: 1px solid #d5b36c;
+    color: #e3bd75;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #d5b36c;
+    color: #190911;
+}
+
+.sticker {
+    position: absolute;
+    font-size: 45px;
+    animation: float 4s infinite ease-in-out;
+}
+
+.sticker.one {top: 15%; left: 8%;}
+.sticker.two {top: 25%; right: 8%;}
+.sticker.three {bottom: 15%; left: 12%;}
+.sticker.four {bottom: 12%; right: 12%;}
+
+@keyframes float {
+    50% {transform: translateY(-18px) rotate(10deg);}
+}
+
+section {
+    padding: 90px 8%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h2 {
+    color: #d5b36c;
+    font-size: 40px;
+    font-weight: normal;
+    margin: 15px;
+}
+
+.heading p {
+    color: #cbb99e;
+}
+
+.card {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(135deg,#481c30,#250e1b);
+    border: 1px solid #b89555;
+    box-shadow: 0 10px 40px #0007;
+    line-height: 2;
+    text-align: center;
+}
+
+.signature {
+    text-align: right;
+    color: #d5b36c;
+    font-style: italic;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 20px;
+}
+
+.meme {
+    background: #42182c;
+    border: 1px solid #b89555;
+    padding: 25px;
+    min-height: 190px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    transition: .3s;
+}
+
+.meme:hover {
+    transform: rotate(-3deg) scale(1.04);
+}
+
+.meme span {
+    font-size: 55px;
+}
+
+.meme p {
+    color: #e2c78e;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid #c9a45c;
+}
+
+.gallery-item {
+    background: #351323;
+    min-height: 220px;
+    display: grid;
+    place-items: center;
+    border: 1px dashed #c9a45c;
+    color: #dfbd78;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+input {
+    margin-top: 20px;
+    color: #f8e8c5;
+    max-width: 100%;
+}
+
+.music {
+    text-align: center;
+    padding: 35px;
+    border: 1px solid #c9a45c;
+    background: #351323;
+}
+
+audio {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 20px;
+}
+
+.cake {
+    text-align: center;
+    font-size: 90px;
+    margin: 25px;
+    animation: float 2s infinite;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #c9a45c;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.confetti {
+    position: fixed;
+    top: -15px;
+    width: 9px;
+    height: 13px;
+    z-index: 100;
+    animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:600px) {
+    nav a {
+        margin: 0 5px;
+        font-size: 10px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    section {
+        padding: 65px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#home">HOME</a>
+    <a href="#letter">LETTER</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#music">MUSIC</a>
+    <a href="#wish">WISH</a>
+</nav>
+
+<!-- WELCOME PAGE -->
+
+<header class="hero" id="home">
+
+    <div class="sticker one">👑</div>
+    <div class="sticker two">😭✨</div>
+    <div class="sticker three">🌸</div>
+    <div class="sticker four">🕺</div>
+
+    <p class="subtitle">✦ A ROYAL CELEBRATION ✦</p>
+
+    <h1>Happy Birthday<br>Sivi!</h1>
+
+    <p>
+        Today, the universe has one important assignment:
+        celebrating YOU.
+
+        May your day be filled with laughter,
+        beautiful surprises and unforgettable memories.
+    </p>
+
+    <a href="#letter" class="btn">
+        ENTER YOUR ROYAL CELEBRATION ✨
+    </a>
+
+</header>
+
+
+<!-- BIRTHDAY LETTER -->
+
+<section id="letter">
+
+    <div class="heading">
+        <p>✦ A MESSAGE FROM THE HEART ✦</p>
+        <h2>Dear Sivi ♡</h2>
+    </div>
+
+    <div class="card">
+
+        Happy Birthday, Sivi! ❤️
+
+        <br><br>
+
+        Another year older, wiser and hopefully
+        a little less dramatic... although we cannot
+        make any promises about that. 😂
+
+        <br><br>
+
+        I hope this new chapter brings you happiness,
+        opportunities, beautiful friendships and
+        countless reasons to smile.
+
+        May your dreams become reality, your efforts
+        bear fruit and your days be filled with peace.
+
+        <br><br>
+
+        Keep shining, keep laughing and never forget
+        how special you are.
+
+        You deserve all the beautiful things life has
+        to offer.
+
+        <br><br>
+
+        And remember: today you are royalty.
+        Tomorrow we return to normal programming. 😭
+
+        <div class="signature">
+            From Theguy ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REACTION MEMES -->
+
+<section>
+
+    <div class="heading">
+        <p>✦ IMPORTANT ROYAL DOCUMENTS ✦</p>
+        <h2>The Reaction Department 😂</h2>
+        <p>Because a birthday without memes is a crime.</p>
+    </div>
+
+    <div class="grid">
+
+        <div class="meme">
+            <span>😭</span>
+            <p>When someone says you're getting old.</p>
+        </div>
+
+        <div class="meme">
+            <span>👑</span>
+            <p>When you remember you're the birthday star.</p>
+        </div>
+
+        <div class="meme">
+            <span>💅</span>
+            <p>Standards? HIGHER. Expectations? ROYAL.</p>
+        </div>
+
+        <div class="meme">
+            <span>🕺</span>
+            <p>When the birthday song starts playing.</p>
+        </div>
+
+        <div class="meme">
+            <span>👀</span>
+            <p>Looking for the person who brought the cake.</p>
+        </div>
+
+        <div class="meme">
+            <span>😭😂</span>
+            <p>Me pretending this website didn't take effort.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHOTO GALLERY -->
+
+<section id="gallery">
+
+    <div class="heading">
+        <p>✦ THE ROYAL ARCHIVES ✦</p>
+        <h2>Beautiful Memories 📸</h2>
+        <p>Add your favourite pictures of Sivi.</p>
+    </div>
+
+    <div class="grid gallery" id="photoGrid">
+
+        <div class="gallery-item">
+            Memory One 🌸
+        </div>
+
+        <div class="gallery-item">
+            Memory Two ✨
+        </div>
+
+        <div class="gallery-item">
+            Memory Three 👑
+        </div>
+
+    </div>
+
+    <div style="text-align:center">
+        <input type="file" id="photoUpload"
+        accept="image/*" multiple>
+    </div>
+
+</section>
+
+
+<!-- MUSIC -->
+
+<section id="music">
+
+    <div class="heading">
+        <p>✦ THE SOUNDTRACK ✦</p>
+        <h2>A Musical Moment 🎶</h2>
+    </div>
+
+    <div class="music">
+
+        <h2 style="color:#d5b36c">
+            Maula Mere Maula
+        </h2>
+
+        <p style="margin-top:12px">
+            Slowed + Reverb Instrumental
+        </p>
+
+        <p style="margin-top:15px;color:#cbb99e">
+            Add your audio file named
+            <b>maula-instrumental.mp3</b>
+            in the same folder as this HTML file.
+        </p>
+
+        <audio controls>
+            <source src="maula-instrumental.mp3"
+            type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+        <br>
+
+        <input type="file" id="musicUpload"
+        accept="audio/*">
+
+    </div>
+
+</section>
+
+
+<!-- BIRTHDAY WISH -->
+
+<section id="wish">
+
+    <div class="heading">
+        <p>✦ ONE LAST THING ✦</p>
+        <h2>Make A Birthday Wish</h2>
+    </div>
+
+    <div class="card">
+
+        <div class="cake">🎂</div>
+
+        <p>
+            May God bless your new year with wisdom,
+            courage, good health and endless happiness.
+
+            May He guide your steps, open beautiful doors
+            and give you strength for every adventure.
+
+            Keep growing, keep believing and keep shining.
+
+            Happy Birthday, Sivi! ❤️
+        </p>
+
+        <button class="btn" onclick="celebrate()">
+            MAKE IT RAIN CONFETTI ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    MADE WITH FRIENDSHIP & A LITTLE TOO MUCH DRAMA
+
+    <br><br>
+
+    <span>FROM THEGUY · FOR SIVI</span>
+
+</footer>
+
+
+<script>
+
+// PHOTO UPLOAD
+
+const photoUpload = document.getElementById("photoUpload");
+const photoGrid = document.getElementById("photoGrid");
+
+photoUpload.addEventListener("change", function() {
+
+    photoGrid.innerHTML = "";
+
+    Array.from(this.files).forEach(file => {
+
+        const image = document.createElement("img");
+        image.src = URL.createObjectURL(file);
+        image.alt = "Birthday memory";
+
+        const container = document.createElement("div");
+        container.className = "gallery-item";
+
+        container.appendChild(image);
+        photoGrid.appendChild(container);
+
+    });
+
+});
+
+
+// MUSIC UPLOAD
+
+const musicUpload = document.getElementById("musicUpload");
+const audio = document.querySelector("audio");
+
+musicUpload.addEventListener("change", function() {
+
+    if (this.files[0]) {
+        audio.src = URL.createObjectURL(this.files[0]);
+        audio.play();
+    }
+
+});
+
+
+// CONFETTI
+
+function celebrate() {
+
+    const colors = [
+        "#d5b36c",
+        "#a94c67",
+        "#f8e8c5",
+        "#e7a7b6"
+    ];
+
+    for (let i = 0; i < 100; i++) {
+
+        const piece = document.createElement("div");
+
+        piece.className = "confetti";
+
+        piece.style.left = Math.random() * 100 + "vw";
+
+        piece.style.background =
+            colors[Math.floor(Math.random() * colors.length)];
+
+        piece.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        document.body.appendChild(piece);
+
+        setTimeout(() => {
+            piece.remove();
+        }, 4500);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
